@@ -15,7 +15,6 @@ contract Lottery {
     
     function enter() public payable {
         require(msg.value > .01 ether);
-
         players.push(msg.sender);
     }
 
@@ -28,8 +27,6 @@ contract Lottery {
         players[index].transfer(this.balance);
         players = new address[](0);
     }
-
-    
 
     function getPlayers() public view returns (address[]) {
         return players;
