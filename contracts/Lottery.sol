@@ -10,7 +10,7 @@ contract Lottery {
 
     modifier restricted() {
         require(msg.sender == manager);
-        _;
+        _; // '_' gets replaced by the code that function holds which is marked with this modifier
     }
     
     function enter() public payable {
