@@ -83,6 +83,7 @@ describe('Lottery', () => {
       assert(e);
     }
   });
+  
   it('sends money to the winner and resets the players array', async () => {
     await lottery.methods.enter().send({
       from: accounts[0],
