@@ -8,6 +8,7 @@ let accounts;
 let lottery;
 
 beforeEach(async () => {
+  
   // Get a list of all accounts
   accounts = await web3.eth.getAccounts();
 
